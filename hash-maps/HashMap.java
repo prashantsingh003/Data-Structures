@@ -101,7 +101,16 @@ public class HashMap <K,V>{
         return -1;
     }
 
-    private void rehash(){}
+    private void rehash(){
+        LinkedList<HMnode>[] old_buckets=this.buckets;
+        initBuckets(2*old_buckets.length);
+        this.size=0;
+        for(int i=0;i<old_buckets.length;i++){
+            for(HMnode node: old_buckets[i]){
+                put(node.key, node.value);
+            }
+        }
+    }
 
     public static void main(String[] args) {
         HashMap h=new HashMap<>();
