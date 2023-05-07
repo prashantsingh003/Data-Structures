@@ -137,7 +137,7 @@ public class HashMap <K,V>{
                 9\tView Commands
                 0\tQuit
                 """);
-        int input=9,key_i,value;
+        int input=9,key_i;
         while(input!=0){
             input=sc.nextInt();
             switch(input){
