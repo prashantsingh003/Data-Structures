@@ -23,7 +23,7 @@ public class HashMap <K,V>{
         this.buckets=new LinkedList[n];
         for(int i=0;i<n;i++)
             this.buckets[i]=new LinkedList<>();
-    }
+        }
 
     public void put(K key, V value){
         int bucket_i=getBucketIndex(key);
