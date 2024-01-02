@@ -1,4 +1,4 @@
-def getStrCombinations(str,i,current_str,ans_arr=[]):
+def getStrCombinations(str,i=0,current_str='',ans_arr=[]):
     if(i==len(str)):
         ans_arr.append(current_str)
         return
@@ -23,8 +23,5 @@ def getStrPermutation(strArr,l,r,arr=[]):
 def swap(a,x,y):
     a[x],a[y]=a[y],a[x]
     return a
-arr=[x for x in "123"]
-res=permute(arr)
-print()
-for r in res:
-    print(r)
+# print(getStrCombinations('0123456789'))
+print(permute([x for x in "123"]))
