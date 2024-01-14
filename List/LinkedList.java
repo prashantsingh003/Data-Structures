@@ -1,4 +1,4 @@
-class MyLinkedList {
+class LinkedList {
     Node start;
     int size;
     public static class Node{
@@ -26,7 +26,7 @@ class MyLinkedList {
         }
     }
 
-    public MyLinkedList() {
+    public LinkedList() {
         start =null;
         size=0;
     }
