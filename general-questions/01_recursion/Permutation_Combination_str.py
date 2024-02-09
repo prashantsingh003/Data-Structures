@@ -48,4 +48,4 @@ def printAllPermutationsFast(s, l=''):
         printAllPermutationsFast(temp, l + s[i])
          
 # printAllPermutationsFast("".join(sorted("ABC")))
-print(getStrCombinations("abc"))
+print(get_all_permutations([x for x in"abc"]))
