@@ -1,11 +1,11 @@
-import sys
-MAX_INT = sys.maxsize
-MIN_INT = -sys.maxsize - 1
+# BEST TIME TO BUY AND SELL STOCK FOR MAXIMUM PROFIT
+
+# BUY AND SELL JUST ONCE
 def max_profit(arr):
 	min_val=arr[0]
 	max_profit=0
 	l=r=0
-	for i,val in enumerate(arr):
+	for i,val in enumerate(arr[1:]):
 		if val<min_val:
 			min_val=val
 			l=i
@@ -26,5 +26,17 @@ def via_aux_arr(arr):
 		max_sofar=max(max_sofar,aux_arr[i]-arr[i])
 	return max_sofar
 
+
+# CAN BUY AND SELL MULTIPLE TIMES BUT CAN HAVE ONLY ONE STOCK
+
+#	trick is to calculat only the positive direction of line (when values are graphed)
+
+def get_total_profit(values):
+	profit=0
+	for i in range(1,len(values)):
+		profit+= values[i]-values[i-1] if values[i]-values[i-1]>0 else 0
+	return profit
+
 ARR=[7, 1, 5, 6, 4]
-print(via_aux_arr(ARR))
+# print(max_profit(ARR))
+print(get_total_profit(ARR))

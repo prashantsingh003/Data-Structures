@@ -40,7 +40,7 @@ def moore_majority_element(nums):
 	if count>len(nums)//2:
 		return el
 	return None
-# print(moore_majority_element(nums))
+
 arrays = [
     [1, 2, 2, 3, 2, 4, 2, 2, 5, 2],
     [3, 4, 3, 4, 2, 4, 4, 4, 5, 4, 4, 5, 4, 4, 5, 5, 5],
