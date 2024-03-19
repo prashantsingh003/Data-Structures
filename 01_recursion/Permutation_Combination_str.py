@@ -11,7 +11,7 @@ def get_all_permutations(nums): # will have duplicates in case of duplicates in 
         if(l==r):
             arr.append([s for s in strArr])
             return
-        for i in range(l,r+1):
+        for i in range(l,r):
             swap(strArr,l,i)
             recurse(strArr,l+1,r,arr)
             swap(strArr,l,i)
@@ -21,7 +21,7 @@ def get_all_permutations(nums): # will have duplicates in case of duplicates in 
     
     if(len(nums)<2):
         return [nums]
-    return recurse(nums,0,len(nums)-1)
+    return recurse(nums,0,len(nums))
 
 
 
